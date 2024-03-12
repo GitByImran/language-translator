@@ -145,6 +145,7 @@ select {
   border: none;
   outline: none;
   font-size: 16px;
+  background: none;
   color: #111;
   padding: 0 10px;
 }
@@ -155,6 +156,7 @@ select {
   }
   .container_top {
     flex-direction: column;
+    gap: 5px;
   }
   .textarea_container {
     flex-direction: column;
@@ -168,10 +170,11 @@ select {
   #copy_icon {
     position: static;
     margin-top: 10px;
-  align-self: flex-end;
+    align-self: flex-end;
   }
   .converter {
     gap: 20px;
+    padding: 10px;
   }
   .converter_icon {
     font-size: 14px;
