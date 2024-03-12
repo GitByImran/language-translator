@@ -37,14 +37,11 @@ converter_icon.addEventListener("click", () => {
 });
 
 function copyTranslatedText() {
-    // Copy the content of the #translate textarea to the clipboard
     to_text.select();
     document.execCommand("copy");
 
-    // Show the toast message
     toast.style.display = "block";
     setTimeout(() => {
-        // Hide the toast message after 2 seconds
         toast.style.display = "none";
     }, 2000);
 }
