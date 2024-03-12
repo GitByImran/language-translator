@@ -17,18 +17,37 @@ body {
 }
 
 .container {
-  width: 690px;
+  width: 800px;
+  padding: 20px;
   background: #fff;
 }
 
 .wrapper {
-  border-radius: 5px;
   border: 1px solid #ccc;
 }
 
 .wrapper .textarea_container {
   display: flex;
   border-bottom: 1px solid #ccc;
+}
+
+.container_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:10px;
+}
+
+.container_top .logo {
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #888;
+}
+
+.toggle_button {
+    border: none;
+    outline: none;
+    background: none;
 }
 
 .textarea_container #text {
@@ -45,6 +64,46 @@ body {
   font-size: 18px;
   padding: 10px 15px;
 }
+
+.textarea_container {
+    position: relative;
+    z-index: 1;
+}
+
+#copy_icon {
+    position: absolute;
+    z-index: 10;
+    color: #888;
+    background: #fff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    right: 5px;
+    top: 5px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copied {
+    color: blue;
+}
+
+.toast {
+    position: fixed;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 16px;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 1px 1px 10px solid #000;
+    border-radius: 5px;
+    display: none;
+}
+
 
 .textarea_container textarea::placeholder {
   color: #b7b6b6;
@@ -72,6 +131,7 @@ body {
   cursor: pointer;
   width: 100%;
   padding: 5px;
+  margin-top: 10px;
   border: none;
   outline: none;
   background: #009999;

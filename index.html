@@ -16,6 +16,12 @@
   <body>
     <div class="language_translator">
       <div class="container">
+        <div class="container_top">
+            <p class="logo">language translator</p>
+          <button class="toggle_button" onclick="toggleAutoTranslate()">
+            🟢 Enable Auto Translate
+          </button>
+        </div>
         <div class="wrapper">
           <div class="textarea_container">
             <textarea
@@ -29,34 +35,27 @@
               placeholder="Translation"
               readonly
             ></textarea>
+            <button id="copy_icon" onclick="copyTranslatedText()">
+              <i class="far fa-clipboard"></i>
+            </button>
+            <div class="toast" id="toast"> <i class="fa-solid fa-check" style="margin-right: 10px;"></i>Copied</div>
           </div>
 
           <div>
             <ul class="converter">
               <li>
-                <select name="" id="">
-                  <option value="">English</option>
-                  <option value="">Bangla</option>
-                  <option value="">Hindi</option>
-                  <option value="">Urdu</option>
-                </select>
+                <select></select>
               </li>
               <li class="converter_icon">
                 <i class="fas fa-arrow-right-arrow-left"></i>
               </li>
               <li>
-                <select name="" id="">
-                  <option value="">Urdu</option>
-                  <option value="">Hindi</option>
-                  <option value="">Bangla</option>
-                  <option value="">English</option>
-                </select>
+                <select></select>
               </li>
             </ul>
           </div>
-
-          <button class="converter_button">translate text</button>
         </div>
+        <button class="converter_button">translate text</button>
       </div>
     </div>
 
