@@ -17,8 +17,9 @@ body {
 }
 
 .container {
-  width: 800px;
+  max-width: 800px;
   padding: 20px;
+  margin: 10px 0;
   background: #fff;
 }
 
@@ -32,22 +33,22 @@ body {
 }
 
 .container_top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom:10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .container_top .logo {
-    text-transform: capitalize;
-    font-weight: 600;
-    color: #888;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #888;
 }
 
 .toggle_button {
-    border: none;
-    outline: none;
-    background: none;
+  border: none;
+  outline: none;
+  background: none;
 }
 
 .textarea_container #text {
@@ -66,44 +67,45 @@ body {
 }
 
 .textarea_container {
-    position: relative;
-    z-index: 1;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 1;
 }
 
 #copy_icon {
-    position: absolute;
-    z-index: 10;
-    color: #888;
-    background: #fff;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    right: 5px;
-    top: 5px;
-    height: 30px;
-    width: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  z-index: 10;
+  color: #888;
+  background: #fff;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  right: 5px;
+  top: 5px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .copied {
-    color: blue;
+  color: blue;
 }
 
 .toast {
-    position: fixed;
-    top: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 6px 16px;
-    background-color: #ffffff;
-    color: #000000;
-    box-shadow: 1px 1px 10px solid #000;
-    border-radius: 5px;
-    display: none;
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 16px;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 1px 1px 10px solid #000;
+  border-radius: 5px;
+  display: none;
 }
-
 
 .textarea_container textarea::placeholder {
   color: #b7b6b6;
@@ -145,4 +147,37 @@ select {
   font-size: 16px;
   color: #111;
   padding: 0 10px;
+}
+
+@media (max-width: 456px) {
+  .wrapper {
+    max-width: 300px;
+  }
+  .container_top {
+    flex-direction: column;
+  }
+  .textarea_container {
+    flex-direction: column;
+    position: relative;
+  }
+  .textarea_container #text {
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+  #copy_icon {
+    position: static;
+    margin-top: 10px;
+  align-self: flex-end;
+  }
+  .converter {
+    gap: 20px;
+  }
+  .converter_icon {
+    font-size: 14px;
+  }
+  select {
+    font-size: 14px;
+    padding: 0;
+  }
 }
